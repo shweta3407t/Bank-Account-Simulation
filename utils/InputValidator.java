@@ -13,4 +13,14 @@ public class InputValidator {
 
     }
 
+    public static boolean isPositive(double balance) {
+        // if(balance.matches)
+
+        if (balance < 0 || balance == 0) {
+            return false;
+        }
+
+        return true;
+
+    }
 }

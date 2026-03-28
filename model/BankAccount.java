@@ -17,6 +17,13 @@ public class BankAccount {
         System.out.print("ENTER AMOUNT TO DEPOSITE :");
         balance = sc.nextDouble();
 
+        boolean isValideBalance = utils.InputValidator.isPositive(balance);
+
+        if (!isValideBalance) {
+            System.out.println("INITIAL BALANCE SHOULD NOT BE NEGATIVE OR ZERO.TRY AGAIN");
+
+        }
+
         totalBalance += balance;
 
         System.out.println(balance + "RUPEES SUCESSFULLY DEPOSITED.");
